@@ -1,0 +1,164 @@
+﻿<!<!DOCTYPE html>
+<html> 
+<head>
+    <title>Shop Thời Trang Nam  No Name</title>
+    <link href="~/Content/style.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.css.map" rel="stylesheet" />
+</head> 
+       
+        <body>
+            <div class="normal-wrapper">
+
+
+                <div id="top-color-splash"></div>
+
+                <ul id="navbar">
+                    <li><a href="@Url.Action("Index","Shop")">Trang Chủ</a></li>
+                    <li><a href="@Url.Action("Dangky","User")">Đăng Ký</a></li>
+
+
+                    <li><a href="@Url.Action("Dangnhap","User")">Đăng Nhập</a></li>
+
+
+                    <li><a href="">Về Chúng Tôi </a></li>
+                    <li><a href="@Url.Action("Gopy","User")">Góp ý - Phản hồi </a></li>
+                    <li><a href="@Url.Action("Index","Aboutus")" class="last-link">Liên Hệ</a></li>
+                    <li><a href="@Url.Action("Giohang","GioHang")">Giỏ Hàng</a></li>
+                </ul>
+               <img src="~/Content/img/n.gif" alt="Logo Shop" style="width:48px;height:48px;"> <h1>No Name</h1>
+            </div>
+            <div id="left">
+                <div class="module">
+                    <h3> Danh Mục</h3>
+                    @Html.Action("Loai", "Shop")
+
+                </div>
+                <div class="clear">
+                </div>
+
+                <div class="module">
+                    <h3>Giải Trí</h3>
+                    <div class="ADS">
+                        <img src="~/Content/img/c.gif" alt="Logo Shop" style="width:231px;height:200px;">
+                        <img src="~/Content/img/q.gif" alt="Logo Shop" style="width:231px;height:210px;">
+                    </div>
+                </div>
+            </div><!--left-->
+            
+            <div>
+                @RenderBody()
+            </div>
+            <div class="clear"></div>
+            <div id="right">
+
+            </div>
+            <div class="thongtin">
+                <div class="mau">
+                    <div class="money"><img src="~/Content/img/f.png" width="35" height="35" alt="money"></div>
+                    <h4>THANH TOÁN & GIAO HÀNG</h4>
+                    <p>Miễn phí vận chuyển cho đơn hàng trên 499.000 VNĐ<br> - Giao hàng và thu tiền tận nơi <br> - Chuyển khoản và giao hàng <br> - Mua hàng tại shop</p>
+                </div>
+                <div class="mau">
+                    <div class="key"><img src="~/Content/img/key.png" width="75" height="75" alt="car"></div>
+                    <h4>THẺ THÀNH VIÊN</h4>
+                    <p>Chế độ ưu đãi thành viên VIP: <br> - 5% cho thành viên Bạc <br> - 10% cho thành viên Vàng<br> - 15% cho thành viên Kim cương</p>
+                </div>
+                <div class="mau">
+                    <div class="hour"><img src="~/Content/img/h.png" width="75" height="75" alt="plan"></div>
+                    <h4> GIỜ MỞ CỬA</h4> <p><strong>8h30 đến 22:00</strong><br> - Tất cả các ngày trong tuần<br> - Áp dụng cho tất cả các chi nhánh hệ thống cửa hàng NoName</p>
+                </div>
+                <div class="mau">
+                    <div class="tv"><img src="~/Content/img/s.jpg" width="75" height="75" alt="plan"></div>
+                    <h4>Hỗ trợ 24/7</h4>
+                    <p>Gọi ngay cho chúng tôi khi bạn có thắc mắc<br> - 0898.402.730</p>
+                </div>
+            </div>
+
+            <div class="clear"></div>
+
+            <footer>
+                <div class="hay">
+                    <div class="chan">
+                        <a href="file:///C:/Users/acer/Desktop/ShopNoName.vn.html"><img src="~/Content/img/n.gif" alt="Logo Icon" style="width:100px;height:100px;"></a>
+                        <div class="clear"></div>
+                        <ul class="list-footer">
+                            <li> <a href="#######" title="gioi thieu">Giới thiệu</a> </li>
+                            <li> <a href="######" title="lien he">Liên hệ</a> </li>
+                            <li> <a href="######" title="tuyen dung">Tuyển dụng</a></li>
+                            <li> <a href="#####" title="tin tuc 4MEN">Tin tức</a> </li>
+                        </ul>
+                        <ul class="list-contact">
+                            <i class="mail"></i> Email:
+                            <a href="mailto:lantiszero2@gmail.com" rel="nofollow" title="Shop EMAIL">lantiszero2@gmail.com</a>
+                            <br>
+                            <i class="fa fa-phone"></i> Hotline:
+                            <a href="tel:0898402730" rel="nofollow" title="Shop HOTLINE" track="Phone-Footer-0898.402.730">0898.420.730</a>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <div class="phone">
+                    <br> <form class="newsletter" action="#" method="post">
+                        <label> <h3>Đăng ký nhận email khuyến mãi</h3> <input type="text" placeholder="Email của bạn" name="email" /> </label>
+                        <button type="submit">Đăng ký</button>
+                    </form>
+                </div>
+
+                <div class="hotro">
+
+                    <h4>HỖ TRỢ KHÁCH HÀNG</h4>
+
+                    <li> <a href="##" title="huong dan dat hang">Hướng dẫn đặt hàng</a> </li>
+                    <li> <a href="#" title="huong dan chon size">Hướng dẫn chọn size</a> </li>
+                    <li> <a href="#" title="cau hoi thuong gap">Câu hỏi thường gặp</a> </li>
+                    <li> <a href="#" title="chinh sach khach vip">Chính sách khách VIP</a> </li>
+                    <li> <a href="##" title="chinh sach giao hang">Thanh toán - Giao hàng</a> </li>
+                    <li> <a href="###" title="chinh sach doi hang">Chính sách đổi hàng</a> </li>
+                    <li> <a href="###" title="chinh sach bao mat">Chính sách bảo mật</a> </li>
+                    <li> <a href="###" title="chinh sach cookie">Chính sách cookie</a> </li>
+                </div>
+                <div class="foot">
+                    <h3> Created by Thái Kuro</h3>
+                </div>
+               
+             
+            </footer>
+
+        
+
+
+
+            <!-- <div id="center">
+        <div class="one-third">
+            <div class="right">
+            <h2 class="no-margin-top">HEY BRO!!!!</h2>
+            <p><h4>Nếu anh em nào còn băn khoăn hay đang muốn tìm cho mình những shop thời trang nam hập dẫn, đồ đẹp, chất lượng  thì đừng nên bỏ lỡ .</h4></p>
+            <p><h4>Bởi ngoại hình đẹp không chỉ khiến bạn tự tin thoải mái hơn mỗi khi bước ra ngoài, đôi khi nó lại mang đến cho bạn những ấn tượng đẹp, cơ hội không ngờ từ ánh nhìn đầu tiên.</h4></p>
+            <p><h4> Còn chờ gì nữa mà không khám phá ngay xem thiên đường mua sắm của các anh chàng được quan tâm nhất hiện nay là gì nhé.</h4></p>
+        </div>
+        <div class="two-third">
+
+        </div>
+    </div>
+         <div class="images">
+                    <div class="item"><img src="image/1.jpg" width="925" height="495" alt=""></div>
+                </div>
+                <div class="Item1">
+                    <div class="content"><div class="money"><img src="image/money.jpg" width="35" height="35" alt="money"></div>
+                        <h4>Trả tiền & hoàn tiền</h4>
+                        <p>Khách hàng hoàn trả hàng được hoàn trả 100% số tiền đã chi trả trước đó</p>
+                    </div>
+                    <div class="content"><div class="car"><img src="image/car.jpg" width="75" height="75" alt="car"></div>
+                        <h4>Miễn phí vận chuyển </h4>
+                        <p>Chúng tôi miễn phí vẫn chuyển cho toàn bộ khách hàng trong nội thành</p>
+                    </div>
+                    <div class="content"><div class="plan"><img src="image/plan.jpg" width="75" height="75" alt="plan"></div>
+                        <h4>Thông tin bảo mật</h4>
+                        <p>Công ty cam kết bảo mật tuyệt đối thông tin cá nhân của khách hàng</p>
+                    </div>
+                </div>
+    </div>-->
+
+        </body>
+</html>

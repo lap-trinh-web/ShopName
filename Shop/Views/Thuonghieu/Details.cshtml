@@ -1,0 +1,46 @@
+﻿@model Shop.Models.NSX
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>NSX</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+
+            Tên Nhà xuất bản:
+        </dt>
+
+      
+
+        <dd>
+            @Html.DisplayFor(model => model.TENNSX)
+        </dd>
+
+        <dt>
+           Địa Chỉ :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DIACHI)
+        </dd>
+
+        <dt>
+        Số Điện Thoại :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DT)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MANSX }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

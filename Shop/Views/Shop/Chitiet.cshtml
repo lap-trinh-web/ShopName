@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "Chitiet";
+    Layout = "~/Views/Shared/_LayoutDangky.cshtml";
+}
+
+<style type="text/css">
+    #Datmua a {
+        background-color: red;
+        color: white;
+        width: 120px;
+        height: 35px;
+        display: block;
+        float: right;
+        text-align: center;
+        padding-top: 10px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+        #Datmua a:hover {
+            background-color: gray;
+            color: red;
+        }
+</style>
+<h3 style="background-color:#f3f3f3;text-align:center;padding:10px">Thông tin chi tiết sản phẩm </h3>
+<div>
+    <div style="width:40%;float:left; border-left:dotted 1px;border-color:azure">
+        <img src="~/Content/img/@Model.ANHBIA" width="250" >
+    </div>
+    <div style="width:60%;float:left;padding:10px">
+        <h4 style="font-weight:bold;color:dodgerblue">Tên Sản phẩm :@Model.TENSP</h4>
+        <p style="text-align:justify"><span style="font-weight:bold">Mô tả :</span>@Model.MOTA</p>
+        <p style="color:red">Giá Bán :  @Model.GIABAN VNĐ</p> 
+    </div>
+    <div>
+        <div id="Datmua">
+            <a href="@Url.Action("ThemGiohang", "GioHang", new { @iMASP= @Model.MASP, @strURL=Request.Url.ToString() })" class="list-group-item">
+                Thêm Vào Giỏ
+            </a>
+        </div>
+    </div>
+</div>

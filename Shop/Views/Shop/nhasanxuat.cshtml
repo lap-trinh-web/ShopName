@@ -1,0 +1,10 @@
+﻿
+@model IEnumerable<Shop.Models.NSX>
+
+
+
+@foreach (var i in Model)
+{
+    <a href="@Url.Action("SPTheoNSX", "Shop", new { id = i.MANSX })"> @i.TENNSX </a>
+}
+<img src="~/Content/img/a.jpg" />

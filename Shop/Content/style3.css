@@ -1,0 +1,8 @@
+.navbar-inverse {
+    background-image: url(img/r.gif);
+    border-color: #080808;
+}
+.navbar-inverse  .navbar-nar > li > a
+{
+    color:deepskyblue
+}

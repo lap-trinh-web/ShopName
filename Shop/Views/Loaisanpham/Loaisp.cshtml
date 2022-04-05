@@ -1,0 +1,54 @@
+﻿@using Shop.Models
+@using PagedList.Mvc;
+@model PagedList.PagedList<Shop.Models.LOAISANPHAM>
+
+@{
+    ViewBag.Title = "Loaisp";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+
+
+<h2>Quản Lý Thông Tin Sản Phẩm</h2>
+
+
+<p>
+    @Html.ActionLink("THÊM MỚI", "themloai")
+</p>
+<table class="table" border="1">
+    <tr>
+        <th style="width:200px">  Mã Loại </th>
+        <th style="width:100px">  Tên Loại  </th>
+
+        <th style="width:200px">  </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MALOAI)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TENLOAI)
+            </td>
+           
+            <td>
+                @Html.ActionLink("Sửa", "Sualoai", new { id = item.MALOAI }) |
+                @Html.ActionLink("Chi tiết", "chitietloai", new { id = item.MALOAI }) |
+                @Html.ActionLink("Xóa", "xoaloai", new { id = item.MALOAI })
+            </td>
+        </tr>
+    }
+</table>
+@* Tao liên kết các trang  *@
+Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)/@Model.PageCount;
+<div class="MenuTrang">
+
+    @Html.PagedListPager(Model, page => Url.Action("Loaisp", new { page = page }))
+</div>
+<style>
+    .MenuTrang li {
+        display: inline;
+    }
+</style>

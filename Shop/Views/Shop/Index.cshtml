@@ -1,0 +1,35 @@
+﻿
+@using Shop.Models
+@using PagedList.Mvc;
+@model PagedList.PagedList<SANPHAM>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+@foreach (var s in Model)
+{
+    <div class="Item">
+        <a href="@Url.Action("Chitiet", "Shop", new { id =s.MASP })">
+            <h3 class="productname">@s.TENSP</h3>
+            <img class="productimg" src="~/Content/img/@s.ANHBIA" width="250">
+        </a>
+        <p class="productprice">Giá Bán :  @s.GIABAN VNĐ</p>
+        <a class="productdetail" href="@Url.Action("ChiTiet","Shop", new { id =s.MASP })"> Chi Tiết</a>
+        <a class="productbigimg" href="@Url.Action("ChiTiet","Shop", new { id =s.MASP })"> Ảnh Lớn</a>
+    </div>
+
+
+}
+
+<div class="clear"></div>
+    Trang @(Model.PageCount<Model.PageNumber?0:Model.PageNumber) /@Model.PageCount
+    <div class="MenuTrang">
+
+        @Html.PagedListPager(Model, page => Url.Action("Index", new { page = page }))
+    </div>
+    <style>
+        .MenuTrang li {
+            display: inline;
+        }
+    </style>

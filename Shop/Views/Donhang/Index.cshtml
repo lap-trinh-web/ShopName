@@ -1,0 +1,20 @@
+﻿@using Shop.Models
+@using PagedList.Mvc;
+@model PagedList.PagedList<DONDATHANG>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)/@Model.PageCount 
+<div class="MenuTrang">
+
+    @Html.PagedListPager(Model, page => Url.Action("Thuonghieu", new { page = page }))
+</div>
+<style>
+    .MenuTrang li {
+        display: inline;
+    }
+</style>
+
